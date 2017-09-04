@@ -20,9 +20,9 @@ import android.widget.Toast
 
 fun toast(msg: Any, isLongToast: Boolean = true) {
     if (isLongToast) {
-        Toast.makeText(Global.context, msg.toString(), Toast.LENGTH_LONG).show()
+        Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_LONG).show()
     } else {
-        Toast.makeText(Global.context, msg.toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_SHORT).show()
     }
 
 }

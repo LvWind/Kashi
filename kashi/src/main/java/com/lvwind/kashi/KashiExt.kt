@@ -18,7 +18,7 @@ package com.lvwind.kashi
 
 import android.app.Application
 
-object Global {
+object KashiExt {
     lateinit var context: Application
 
     /**

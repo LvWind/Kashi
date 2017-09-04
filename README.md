@@ -26,3 +26,9 @@ dependencies {
 	        compile 'com.github.LvWind:Kashi:-SNAPSHOT'
 	}
 ```
+
+Init
+
+```kotlin
+KashiExt.with(application)
+```
