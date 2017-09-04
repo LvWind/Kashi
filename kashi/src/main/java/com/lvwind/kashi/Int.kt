@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi.sample
+package com.lvwind.kashi
 
-import android.app.Activity
-import android.os.Bundle
-import android.util.Log
-import com.lvwind.kashi.TAG
+import android.content.res.Resources
 
-class MainActivity : Activity() {
+/**
+ * convert px to dp
+ */
+val Int.toDp: Int
+    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.d(TAG,"test")
-    }
-}
+/**
+ * convert dp to px
+ */
+val Int.toPx: Int
+    get() = (this * Resources.getSystem().displayMetrics.density).toInt()

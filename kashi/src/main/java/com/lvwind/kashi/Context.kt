@@ -14,18 +14,25 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi.sample
+package com.lvwind.kashi
 
-import android.app.Activity
-import android.os.Bundle
-import android.util.Log
-import com.lvwind.kashi.TAG
+import android.content.Context
+import android.graphics.drawable.Drawable
+import android.support.annotation.ColorRes
+import android.support.annotation.DrawableRes
 
-class MainActivity : Activity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.d(TAG,"test")
-    }
+/**
+ * get color int by resource id
+ */
+fun Context.getColorById(@ColorRes resId: Int): Int {
+    return resources.getColor(resId)
 }
+
+/**
+ * get Drawable by resource id
+ */
+fun Context.getDrawableById(@DrawableRes resId: Int): Drawable {
+    return resources.getDrawable(resId)
+}
+
+
