@@ -23,7 +23,7 @@ import java.security.NoSuchAlgorithmException
 /**
  * post the string in toast
  */
-fun String.toast() = toast(this, false)
+fun String.toast() = toast(this)
 
 /**
  * get md5

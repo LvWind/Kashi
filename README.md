@@ -4,7 +4,7 @@
 
 kashi = かし = 菓子
 
-A Kotlin syntactic sugar library.
+A Kotlin syntactic sugar and Extensions library.
 
 ##	How to
 

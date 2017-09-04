@@ -18,11 +18,16 @@ package com.lvwind.kashi
 
 import android.widget.Toast
 
-fun toast(msg: Any, isLongToast: Boolean = true) {
-    if (isLongToast) {
-        Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_LONG).show()
-    } else {
-        Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_SHORT).show()
-    }
+/**
+ * show toast
+ */
+fun toast(msg: Any) {
+    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_SHORT).show()
+}
 
+/**
+ * show toast with Toast.LENGTH_LONG
+ */
+fun longToast(msg: Any) {
+    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_LONG).show()
 }
