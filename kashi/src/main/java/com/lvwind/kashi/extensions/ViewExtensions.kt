@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi
+package com.lvwind.kashi.extensions
 
 import android.view.View
 

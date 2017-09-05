@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi
+package com.lvwind.kashi.extensions
 
 import android.graphics.Bitmap
 import android.util.Base64

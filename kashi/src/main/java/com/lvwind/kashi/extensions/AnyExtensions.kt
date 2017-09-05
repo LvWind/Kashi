@@ -14,22 +14,7 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi.sample
+package com.lvwind.kashi.extensions
 
-import android.app.Activity
-import android.os.Bundle
-import android.util.Log
-import com.lvwind.kashi.KashiExt
-import com.lvwind.kashi.extensions.TAG
-import com.lvwind.kashi.extensions.isWifiNetwork
-
-class MainActivity : Activity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        KashiExt.with(application)
-
-        Log.d(TAG, isWifiNetwork().toString())
-    }
-}
+val Any.TAG: String
+    get() = this::class.java.simpleName

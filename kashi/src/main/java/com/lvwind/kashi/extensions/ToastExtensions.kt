@@ -14,18 +14,21 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi
+package com.lvwind.kashi.extensions
 
-import android.content.res.Resources
-
-/**
- * convert px to dp
- */
-val Int.toDp: Int
-    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
+import android.widget.Toast
+import com.lvwind.kashi.KashiExt
 
 /**
- * convert dp to px
+ * show toast
  */
-val Int.toPx: Int
-    get() = (this * Resources.getSystem().displayMetrics.density).toInt()
+fun toast(msg: Any) {
+    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_SHORT).show()
+}
+
+/**
+ * show toast with Toast.LENGTH_LONG
+ */
+fun longToast(msg: Any) {
+    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_LONG).show()
+}

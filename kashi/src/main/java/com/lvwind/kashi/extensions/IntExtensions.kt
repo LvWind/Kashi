@@ -14,22 +14,18 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi
+package com.lvwind.kashi.extensions
 
-import android.app.Activity
-import android.content.Context
-import android.view.inputmethod.InputMethodManager
-
+import android.content.res.Resources
 
 /**
- * hide soft keyboard when there is a editable view on focus
+ * convert px to dp
  */
-fun Activity.hideKeyboard(): Boolean {
-    val view = currentFocus
-    if (view != null) {
-        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        return inputMethodManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
-    }
-    return false
-}
+val Int.toDp: Int
+    get() = (this / Resources.getSystem().displayMetrics.density).toInt()
 
+/**
+ * convert dp to px
+ */
+val Int.toPx: Int
+    get() = (this * Resources.getSystem().displayMetrics.density).toInt()

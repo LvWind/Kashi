@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package com.lvwind.kashi
+package com.lvwind.kashi.extensions
 
-import android.widget.Toast
+import android.app.Activity
+import android.view.inputmethod.InputMethodManager
 
-/**
- * show toast
- */
-fun toast(msg: Any) {
-    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_SHORT).show()
-}
 
 /**
- * show toast with Toast.LENGTH_LONG
+ * hide soft keyboard when there is a editable view on focus
  */
-fun longToast(msg: Any) {
-    Toast.makeText(KashiExt.context, msg.toString(), Toast.LENGTH_LONG).show()
+fun Activity.hideKeyboard(): Boolean {
+    val view = currentFocus
+    if (view != null) {
+        return inputMethodManager.hideSoftInputFromWindow(view.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+    }
+    return false
 }
+
