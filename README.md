@@ -10,7 +10,7 @@ A Kotlin syntactic sugar and Extensions library.
 
 Add it in your root build.gradle at the end of repositories:
 
-```
+```groovy
 	allprojects {
 		repositories {
 			...
@@ -21,9 +21,9 @@ Add it in your root build.gradle at the end of repositories:
 
 Add the dependency
 
-```
+```groovy
 dependencies {
-	        compile 'com.github.LvWind:Kashi:-SNAPSHOT'
+	        implementation 'com.github.LvWind:Kashi:<latest-version>'
 	}
 ```
 
